@@ -17,6 +17,12 @@
 <h6>${ticket.getInc()}</h6>
 <p>${ticket.getGroup()}</p>
 <p>${ticket.getPriority()}</p>
+<c:if test="${not fn:containsIgnoreCase(ticket.getSla(), 'breached')}">
+        <p>${ticket.getSla()}</p>
+</c:if>
+<c:if test="${fn:containsIgnoreCase(ticket.getSla(), 'breached')}">
+        <p style="color: red;">${ticket.getSla()}</p>
+</c:if>
 </div>
 </td>
 </tr>
