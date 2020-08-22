@@ -9,7 +9,7 @@ public class Ticket {
 	private String asignee;
 	private String sla;
 	
-	public Ticket(String status, String inc, String group, String sla, String priority, String asignee) {
+	public Ticket(String status, String inc, String group, String priority, String asignee,  String sla) {
 		this.asignee = asignee;
 		this.inc = inc;
 		this.group = group;
